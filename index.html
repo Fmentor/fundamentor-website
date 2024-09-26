@@ -110,7 +110,7 @@
       <h1 class="font-robotSlab text-5xl text-white font-semibold ">Joy of learning</h1>
       <p class="text-center text-white mb-10 max-w-sm mt-5">Fundamentor is a digital educational content provider
         and an e-learning solutions company </p>
-      <a href="#" class="bg-white rounded py-2 px-4 text-bodyTextColor  hover:bg-blueDark hover:text-white">CONTACT
+      <a href="#" class="bg-white rounded py-2 px-4 text-bodyTextColor  hover:bg-blueDark hover:text-white" onclick="openModal('modal-1')">CONTACT
         US</a>
     </div>
     <div class="bg-[url('../images/hero-banner.png')] bg-cover h-full  w-full absolute">
@@ -492,7 +492,104 @@
       </div>
     </div>
   </footer>
+<div class="fixed z-10 hidden justify-center items-center flex-col h-full w-full top-0 jw-modal" id="modal-1">
+  <div class=" bg-white max-w-xl rounded w-full">
+  <div class="flex justify-between border-b border-lightGrey py-4 px-4 w-full">
+    <h4 class="font-roboto text-xl font-medium">Contact Us</h4>
+    <button onclick="closeModal('modal-1')" type="button" id="cross" class="text-black hover:bg-lightPink hover:text-bodyTextColor w-6 h-6 rounded-full flex justify-center items-center">
+      <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
+          <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"/>
+      </svg>
+      <span class="sr-only">Close modal</span>
+  </button>
+  </div>
+  <form method="POST" id="form" class="grid grid-cols-1 gap-6 py-4 px-4 w-full">
+
+    <input type="hidden" name="access_key" value="436907d2-6daf-43e8-afe0-7e9989e61b43">
+
+    <input placeholder="Type Your Name" class="px-4 py-2 border border-lightGrey focus:outline focus:outline-blue rounded-md focus-within:outline-blueDark" type="text" name="name" required>
+    <input placeholder="Type Your Email" class="px-4 py-2 border border-lightGrey focus:outline focus:outline-blue rounded-md focus-within:outline-blueDark" type="email" name="email" required>
+    <input class="px-4 py-2 border border-lightGrey focus:outline focus:outline-blue rounded-md focus-within:outline-blueDark" type="number" placeholder="Enter Your Number" required>
+    <textarea placeholder="Enter Your Message" class="px-4 py-2 border border-lightGrey focus:outline focus:outline-blue rounded-md focus-within:outline-blueDark" name="message" required></textarea>
+    <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+
+    <button type="submit" class="bg-blueDark px-6 py-4 rounded-full text-white focus:ring focus:ring-blue">Submit</button>
+
+    <div id="result"></div>
+  </div>
+</form>
+
+</div>
+<div class="bg-black bg-opacity-50 w-full h-full fixed top-0 left-0 bottom-0 right-0 jw-modal-background hidden"></div>
+
+
+<script>
+const form = document.getElementById('form');
+const result = document.getElementById('result');
+
+form.addEventListener('submit', function(e) {
+  e.preventDefault();
+  const formData = new FormData(form);
+  const object = Object.fromEntries(formData);
+  const json = JSON.stringify(object);
+  result.innerHTML = "Please wait..."
+
+    fetch('https://api.web3forms.com/submit', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'Accept': 'application/json'
+            },
+            body: json
+        })
+        .then(async (response) => {
+            let json = await response.json();
+            if (response.status == 200) {
+                result.innerHTML = "Form submitted successfully";
+            } else {
+                console.log(response);
+                result.innerHTML = json.message;
+            }
+        })
+        .catch(error => {
+            console.log(error);
+            result.innerHTML = "Something went wrong!";
+        })
+        .then(function() {
+            form.reset();
+            setTimeout(() => {
+                result.style.display = "none";
+            }, 3000);
+        });
+});
+</script>
   <script>
+    function openModal(id) {
+    document.getElementById(id).classList.add('flex');
+    document.getElementById(id).classList.remove('hidden');
+    document.querySelector('.jw-modal-background').classList.add('visible');
+    document.querySelector('.jw-modal-background').classList.remove('hidden');
+    document.body.classList.add('jw-modal-open');
+}
+
+// close currently open modal
+function closeModal(id) {
+    document.querySelector('.jw-modal.flex').classList.remove('flex');
+    document.querySelector('.jw-modal').classList.add('hidden');
+    document.querySelector('.jw-modal-background').classList.add('hidden');
+    document.querySelector('.jw-modal-background').classList.remove('visible');
+    document.body.classList.remove('jw-modal-open');
+}
+
+window.addEventListener('load', function() {
+    // close modals on background click
+    document.addEventListener('click', event => {
+        if (event.target.classList.contains('jw-modal')) {
+            closeModal();
+        }
+    });
+});
+
 document.addEventListener("DOMContentLoaded", () => {
     const toggle = document.querySelector('#button-toggle'),
     sidebar = document.querySelector('#menu');
