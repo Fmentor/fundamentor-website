@@ -501,11 +501,10 @@ html,body{
   </div>
   <form method="POST" id="form" class="grid grid-cols-1 gap-6 py-4 px-4 w-full">
     <input type="hidden" name="subject" value="Contact Form Submitted on Website">
-
     <input type="hidden" name="access_key" value="39270e12-e6ec-4189-a389-6368c292212e">
     <input placeholder="Type Your Name" class="px-4 py-2 border border-lightGrey focus:outline focus:outline-blue rounded-md focus-within:outline-blueDark" type="text" name="name" required>
     <input placeholder="Type Your Email" class="px-4 py-2 border border-lightGrey focus:outline focus:outline-blue rounded-md focus-within:outline-blueDark" type="email" name="email" required>
-    <input class="px-4 py-2 border border-lightGrey focus:outline focus:outline-blue rounded-md focus-within:outline-blueDark" type="number" placeholder="Enter Your Number" required>
+    <input class="px-4 py-2 border border-lightGrey focus:outline focus:outline-blue rounded-md focus-within:outline-blueDark" type="number" name="phone" placeholder="Enter Your Number" required>
     <textarea placeholder="Enter Your Message" class="px-4 py-2 border border-lightGrey focus:outline focus:outline-blue rounded-md focus-within:outline-blueDark" name="message" required></textarea>
     <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
     <button type="submit" class="bg-blueDark px-6 py-4 rounded-full text-white focus:ring focus:ring-blue">Submit</button>

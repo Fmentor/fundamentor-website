@@ -2942,24 +2942,8 @@ video {
   }
 }
 
-.placeholder\:text-lightGrey::-moz-placeholder {
-  --tw-text-opacity: 1;
-  color: rgb(123 128 154 / var(--tw-text-opacity));
-}
-
-.placeholder\:text-lightGrey::placeholder {
-  --tw-text-opacity: 1;
-  color: rgb(123 128 154 / var(--tw-text-opacity));
-}
-
 .focus-within\:outline-blueDark:focus-within {
   outline-color: #1E78E9;
-}
-
-.focus-within\:ring-0:focus-within {
-  --tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);
-  --tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(0px + var(--tw-ring-offset-width)) var(--tw-ring-color);
-  box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000);
 }
 
 .hover\:bg-blueDark:hover {
