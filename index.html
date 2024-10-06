@@ -1,0 +1,620 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <title>Fundamentor</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="./assets/css/fundamentor.css?v=1" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@600&family=Roboto:wght@400;500&display=swap"
+    rel="stylesheet">
+    <style>
+      .is-visible ul{
+    --tw-translate-x: 10%;
+    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+.is-visible .hidden{
+    display: block !important;
+}
+html,body{
+  overflow: scroll;
+  scroll-behavior: smooth;
+}
+
+    </style>
+</head>
+
+<body class="font-roboto bg-lightYellow scroll-smooth">
+  <header class="fixed w-full z-50 top-0 py-3 ">
+    <div class="container flex justify-between items-center">
+      <div class="logo flex justify-between w-full md:w-auto">
+        <a href="/" class="outline-none focus:outline-blueDark font-roboto font-medium text-base text-white">
+          Fundamentor
+        </a>
+        <button type="button" id="button-toggle"
+          class="toggle inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-white focus:text-blue focus:outline-none focus:outline-blue md:hidden"
+          aria-controls="navbar-default" aria-expanded="false">
+          <span class="sr-only">Open main menu</span>
+          <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M1 1h15M1 7h15M1 13h15" />
+          </svg>
+        </button>
+
+      </div>
+      <nav id="menu">
+        <div class="hidden bg-bodyTextColor bg-opacity-50 fixed w-full h-full z-20 left-0 top-[4rem]"></div>
+        <ul class="gap-1 md:flex items-center max-sm:items-start max-sm:fixed max-sm:-left-0 max-sm:h-full max-sm:top-[4rem] transition-all max-sm:translate-x-[200%] max-sm:w-full z-20 max-sm:bg-bodyTextColor max-sm:shadow-md max-sm:p-4">
+          <li>
+            <a href="#" class="flex items-center gap-2 py-2 px-4 text-white font-roboto">
+              <span><svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect x="12" y="3.75" width="5.25" height="3.75" rx="1" transform="rotate(-180 12 3.75)"
+                    fill="currentcolor" />
+                  <rect width="5.25" height="7.5" rx="1" fill="currentcolor" />
+                  <rect y="8.25" width="5.25" height="3.75" rx="1" fill="currentcolor" />
+                  <rect x="12" y="12" width="5.25" height="7.5" rx="1" transform="rotate(-180 12 12)"
+                    fill="currentcolor" />
+                </svg>
+              </span>
+              Home
+            </a>
+          </li>
+          <li>
+            <a href="https://school.fundamentor.com" class="flex items-center gap-2 py-2 px-4 text-white font-roboto">
+              <span><svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect x="12" y="3.75" width="5.25" height="3.75" rx="1" transform="rotate(-180 12 3.75)"
+                    fill="currentcolor" />
+                  <rect width="5.25" height="7.5" rx="1" fill="currentcolor" />
+                  <rect y="8.25" width="5.25" height="3.75" rx="1" fill="currentcolor" />
+                  <rect x="12" y="12" width="5.25" height="7.5" rx="1" transform="rotate(-180 12 12)"
+                    fill="currentcolor" />
+                </svg>
+              </span>
+              For School
+            </a>
+          </li>
+          <li>
+            <a href="#about" class="flex items-center gap-2 py-2 px-4 text-white font-roboto">
+              <span><svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect x="12" y="3.75" width="5.25" height="3.75" rx="1" transform="rotate(-180 12 3.75)"
+                    fill="currentcolor" />
+                  <rect width="5.25" height="7.5" rx="1" fill="currentcolor" />
+                  <rect y="8.25" width="5.25" height="3.75" rx="1" fill="currentcolor" />
+                  <rect x="12" y="12" width="5.25" height="7.5" rx="1" transform="rotate(-180 12 12)"
+                    fill="currentcolor" />
+                </svg>
+              </span>
+              About us
+            </a>
+          </li>
+          <li>
+            <a href="#" class="flex items-center gap-2 py-2 px-4 text-white font-roboto">
+              <span><svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect x="12" y="3.75" width="5.25" height="3.75" rx="1" transform="rotate(-180 12 3.75)"
+                    fill="currentcolor" />
+                  <rect width="5.25" height="7.5" rx="1" fill="currentcolor" />
+                  <rect y="8.25" width="5.25" height="3.75" rx="1" fill="currentcolor" />
+                  <rect x="12" y="12" width="5.25" height="7.5" rx="1" transform="rotate(-180 12 12)"
+                    fill="currentcolor" />
+                </svg>
+              </span>
+              Resources
+            </a>
+          </li>
+          <li class="">
+            <a href="#" class="bg-white px-4 py-2 uppercase hover:bg-blueDark hover:text-white rounded inline-flex max-sm:ml-3">Call Us</a>
+          </li>
+        </ul>
+      </nav>
+  </header>
+  <div class="relative h-[56.25rem]">
+    <div class="flex justify-center items-center absolute z-10 w-full flex-col h-[26rem]">
+      <h1 class="font-robotSlab text-5xl text-white font-semibold ">Joy of learning</h1>
+      <p class="text-center text-white mb-10 max-w-sm mt-5">Fundamentor is a digital educational content provider
+        and an e-learning solutions company </p>
+      <a href="#" class="bg-white rounded py-2 px-4 text-bodyTextColor  hover:bg-blueDark hover:text-white" onclick="openModal('modal-1')">CONTACT
+        US</a>
+    </div>
+    <div class="bg-[url('../images/hero-banner.png')] bg-cover h-full  w-full absolute">
+
+    </div>
+    <img class="absolute w-52 h-52 translate-x-[23rem] translate-y-[22rem] max-sm:hidden" src="./assets/images/bulb.gif" />
+  </div>
+
+  <!-- End of hero Section -->
+
+  <main class="px-6">
+    <section class="py-12 bg-yellowlime -mt-10 relative z-10 rounded-t-lg">
+      <div class="container">
+        <div class="text-2xl text-bodyTextColor font-roboto font-medium mb-4  ">Learning knows no boundaries</div>
+        <p class="text-bodyTextColor font-roboto leading-normal">We ignite the joy of learning by crafting interactive
+          and visually appealing experiences that captivate learners. Through engaging scenarios and narratives, we
+          invite learners to actively participate in their learning journey. Through gamification, videos and
+          story-telling, we foster curiosity and satisfaction in learners are they explore and master new skills. We
+          turn each learning activity into an adventure.</p>
+      </div>
+    </section>
+    <section class="bg-lightPink py-20">
+      <div class="container">
+        <div class="grid md:grid-cols-2 grid-cols-1">
+          <div>
+            <h2 class="font-robotSlab text-bodyTextColor text-3xl mb-8">
+              Services
+            </h2>
+            <div class="grid md:grid-cols-2 gap-4 grid-cols-1">
+              <div class="flex gap-4 flex-col">
+                <span>
+                  <svg width="31" height="30" viewBox="0 0 31 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M24.453 22.6358C24.0688 21.5025 22.9604 20.6667 21.6451 20.6667H20.1673V16.4167C20.1673 16.041 20.0116 15.6806 19.7345 15.4149C19.4573 15.1493 19.0814 15 18.6895 15H9.8226V12.1667H12.7782C13.1702 12.1667 13.5461 12.0174 13.8232 11.7517C14.1003 11.4861 14.256 11.1257 14.256 10.75V7.91668H17.2117C17.9956 7.91668 18.7473 7.61817 19.3016 7.08681C19.8559 6.55546 20.1673 5.83479 20.1673 5.08334V4.50251C24.4973 6.17418 27.5564 10.24 27.5564 15C27.5564 17.9467 26.3742 20.6242 24.453 22.6358ZM14.256 26.2342C8.41867 25.54 3.91132 20.78 3.91132 15C3.91132 14.1217 4.02955 13.2717 4.22167 12.4642L11.3004 19.25V20.6667C11.3004 21.4181 11.6118 22.1388 12.1661 22.6701C12.7204 23.2015 13.4722 23.5 14.256 23.5V26.2342ZM15.7339 0.833344C13.7932 0.833344 11.8715 1.19978 10.0785 1.91172C8.28553 2.62366 6.6564 3.66717 5.28412 4.98266C2.51267 7.63943 0.955688 11.2428 0.955688 15C0.955688 18.7572 2.51267 22.3606 5.28412 25.0174C6.6564 26.3329 8.28553 27.3764 10.0785 28.0883C11.8715 28.8002 13.7932 29.1667 15.7339 29.1667C19.6533 29.1667 23.4122 27.6741 26.1836 25.0174C28.9551 22.3606 30.512 18.7572 30.512 15C30.512 13.1396 30.1298 11.2974 29.3871 9.57866C28.6445 7.85988 27.5559 6.29816 26.1836 4.98266C24.8113 3.66717 23.1822 2.62366 21.3892 1.91172C19.5963 1.19978 17.6746 0.833344 15.7339 0.833344V0.833344Z"
+                      fill="url(#paint0_linear_3623_4473)" />
+                    <defs>
+                      <linearGradient id="paint0_linear_3623_4473" x1="15.7339" y1="0.833344" x2="15.7339" y2="29.1667"
+                        gradientUnits="userSpaceOnUse">
+                        <stop stop-color="#439DEE" />
+                        <stop offset="1" stop-color="#1E78E9" />
+                      </linearGradient>
+                    </defs>
+                  </svg>
+                </span>
+                <h4 class="text-xl text-bodyTextColor font-semibold">Interactive Videos</h4>
+                <p class="text-lightGrey text-base text-balance">Storyboarding & animation of interactive
+                  videos with multi-language support</p>
+              </div>
+              <div class="flex gap-4 flex-col">
+                <span>
+                  <svg width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M9.91663 21.25H12.75C12.75 22.78 14.6908 24.0833 17 24.0833C19.3091 24.0833 21.25 22.78 21.25 21.25C21.25 19.6917 19.7766 19.125 16.66 18.3742C13.6566 17.6233 9.91663 16.6883 9.91663 12.75C9.91663 10.2142 11.9991 8.06083 14.875 7.33833V4.25H19.125V7.33833C22.0008 8.06083 24.0833 10.2142 24.0833 12.75H21.25C21.25 11.22 19.3091 9.91667 17 9.91667C14.6908 9.91667 12.75 11.22 12.75 12.75C12.75 14.3083 14.2233 14.875 17.34 15.6258C20.3433 16.3767 24.0833 17.3117 24.0833 21.25C24.0833 23.7858 22.0008 25.9392 19.125 26.6617V29.75H14.875V26.6617C11.9991 25.9392 9.91663 23.7858 9.91663 21.25Z"
+                      fill="url(#paint0_linear_3623_4413)" />
+                    <defs>
+                      <linearGradient id="paint0_linear_3623_4413" x1="17" y1="4.25" x2="17" y2="29.75"
+                        gradientUnits="userSpaceOnUse">
+                        <stop stop-color="#439DEE" />
+                        <stop offset="1" stop-color="#1E78E9" />
+                      </linearGradient>
+                    </defs>
+                  </svg>
+                </span>
+                <h4 class="text-xl text-bodyTextColor font-semibold">Content Creation</h4>
+                <p class="text-lightGrey text-base text-balance">Original, high quality content across
+                  domains by subject matter experts.</p>
+              </div>
+              <div class="flex gap-4 flex-col mt-10">
+                <span>
+                  <svg width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M17 26.9167C18.5583 26.9167 19.8333 28.1917 19.8333 29.75C19.8333 31.3083 18.5583 32.5833 17 32.5833C15.4416 32.5833 14.1666 31.3083 14.1666 29.75C14.1666 28.1917 15.4416 26.9167 17 26.9167ZM17 1.41666C18.5583 1.41666 19.8333 2.69166 19.8333 4.24999C19.8333 5.80832 18.5583 7.08332 17 7.08332C15.4416 7.08332 14.1666 5.80832 14.1666 4.24999C14.1666 2.69166 15.4416 1.41666 17 1.41666ZM8.49996 22.6667C10.0583 22.6667 11.3333 23.9417 11.3333 25.5C11.3333 27.0583 10.0583 28.3333 8.49996 28.3333C6.94163 28.3333 5.66663 27.0583 5.66663 25.5C5.66663 23.9417 6.94163 22.6667 8.49996 22.6667ZM4.24996 14.1667C5.80829 14.1667 7.08329 15.4417 7.08329 17C7.08329 18.5583 5.80829 19.8333 4.24996 19.8333C2.69163 19.8333 1.41663 18.5583 1.41663 17C1.41663 15.4417 2.69163 14.1667 4.24996 14.1667ZM8.49996 5.66666C10.0583 5.66666 11.3333 6.94166 11.3333 8.49999C11.3333 10.0583 10.0583 11.3333 8.49996 11.3333C6.94163 11.3333 5.66663 10.0583 5.66663 8.49999C5.66663 6.94166 6.94163 5.66666 8.49996 5.66666ZM25.5 22.6667C27.0583 22.6667 28.3333 23.9417 28.3333 25.5C28.3333 27.0583 27.0583 28.3333 25.5 28.3333C23.9416 28.3333 22.6666 27.0583 22.6666 25.5C22.6666 23.9417 23.9416 22.6667 25.5 22.6667ZM29.75 14.1667C31.3083 14.1667 32.5833 15.4417 32.5833 17C32.5833 18.5583 31.3083 19.8333 29.75 19.8333C28.1916 19.8333 26.9166 18.5583 26.9166 17C26.9166 15.4417 28.1916 14.1667 29.75 14.1667ZM25.5 5.66666C27.0583 5.66666 28.3333 6.94166 28.3333 8.49999C28.3333 10.0583 27.0583 11.3333 25.5 11.3333C23.9416 11.3333 22.6666 10.0583 22.6666 8.49999C22.6666 6.94166 23.9416 5.66666 25.5 5.66666Z"
+                      fill="url(#paint0_linear_3623_4404)" />
+                    <defs>
+                      <linearGradient id="paint0_linear_3623_4404" x1="17" y1="1.41666" x2="17" y2="32.5833"
+                        gradientUnits="userSpaceOnUse">
+                        <stop stop-color="#439DEE" />
+                        <stop offset="1" stop-color="#1E78E9" />
+                      </linearGradient>
+                    </defs>
+                  </svg>
+
+
+
+                </span>
+                <h4 class="text-xl text-bodyTextColor font-semibold">Assessments</h4>
+                <p class="text-lightGrey text-base text-balance">Scientifically designed assessments
+                  Vetted by Subject matter experts.</p>
+              </div>
+              <div class="flex gap-4 flex-col mt-10">
+                <span>
+                  <svg width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M2.83337 2.83334H5.66671V28.3333H31.1667V31.1667H2.83337V2.83334ZM9.91671 14.1667H24.0834V18.4167H9.91671V14.1667ZM15.5834 21.25H29.75V25.5H15.5834V21.25ZM8.50004 5.66668H31.1667V11.3333H28.3334V8.50001H11.3334V11.3333H8.50004V5.66668Z"
+                      fill="url(#paint0_linear_3623_4483)" />
+                    <defs>
+                      <linearGradient id="paint0_linear_3623_4483" x1="17" y1="2.83334" x2="17" y2="31.1667"
+                        gradientUnits="userSpaceOnUse">
+                        <stop stop-color="#439DEE" />
+                        <stop offset="1" stop-color="#1E78E9" />
+                      </linearGradient>
+                    </defs>
+                  </svg>
+                </span>
+                <h4 class="text-xl text-bodyTextColor font-semibold">Simulations, Mini-games</h4>
+                <p class="text-lightGrey text-base text-balance">Interactive simulations with game
+                  -like fun. 50% higher engagement.</p>
+              </div>
+            </div>
+          </div>
+          <div class="flex justify-end">
+            <div class="bg-white rounded-md shadow-md p-6 w-[25.5rem]">
+              <div class="-mt-14">
+                <img src="./assets/images/video_thumb.png" />
+              </div>
+              <div class="text-center text-bodyTextColor flex flex-col gap-3 mt-6 items-center justify-center">
+                <h4 class="text-xl font-roboto text-center">Sample Videos </h4>
+                <p class="text-lightGrey font-roboto text-base">We create educational, explainer,
+                  technical, branding and promotion
+                  videos in multiple languages. </p>
+                <a href="#"
+                  class="bg-gradient-to-r from-blue to-blueDark py-2 px-4 text-white text-base uppercase font-medium max-w-56 rounded-md hover:to-blueDark hover:from-blue hover:bg-gradient-to-tr focus:ring-1 focus:ring-blueDark">
+                  Find out more
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="bg-white shadow-md rounded-md p-6 mt-20">
+          <h2 class="font-robotSlab text-bodyTextColor text-3xl mb-8">
+            Featured Clients
+          </h2>
+          <div class="grid md:grid-cols-4 gap-10 grid-cols-2 place-items-center">
+            <img src="./assets/images/ac.png">
+            <img src="./assets/images/st.png">
+            <img src="./assets/images/magi.png">
+            <img src="./assets/images/fisdom.png">
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="py-12 bg-cyan" id="about">
+      <div class="container">
+        <h2 class="font-robotSlab text-bodyTextColor text-3xl mb-4">
+          About Us
+        </h2>
+        <p class="text-bodyTextColor font-roboto">Fundamentor journey started 10 years ago. It was founded by IIM Alumni
+          with a passion for education. </p>
+
+        <div class="grid md:grid-cols-2 gap-y-14 gap-x-8 mt-12">
+          <div class="bg-white shadow-md p-4 rounded-md">
+            <div class="flex flex-wrap gap-4">
+              <div class="w-28 h-28 -mt-8">
+                <img src="./assets/images/Joy-of-learning.gif" class="rounded-md" />
+              </div>
+              <div class="flex-1 flex flex-col gap-1">
+                <h4 class="text-xl font-roboto text-bodyTextColor font-medium">Joy of Learning</h4>
+                <div class="text text-blue text-sm font-roboto font-semibold">Our Vision</div>
+                <p class="text-lightGrey text-base leading-snug font-roboto">At Fundamentor, we believe in the enduring
+                  joy of
+                  learning, where every discovery sparks excitement and
+                  every lesson ignites curiosity. </p>
+              </div>
+            </div>
+          </div>
+          <div class="bg-white shadow-md p-4 rounded-md">
+            <div class="flex flex-wrap gap-4">
+              <div class="w-28 h-28 -mt-8">
+                <img src="./assets/images/Gamification 1.gif" class="rounded-md" />
+              </div>
+              <div class="flex-1 flex flex-col gap-1">
+                <h4 class="text-xl font-roboto text-bodyTextColor font-medium">Gamification is in our DNA</h4>
+                <div class="text text-blue text-sm font-roboto font-semibold">Our Purpose</div>
+                <p class="text-lightGrey text-base leading-snug font-roboto">Learner engagement is at the heart of
+                  everything we do.
+                  We have been consistently rated as a top 10 company in
+                  the Global Education Gamification market.</p>
+              </div>
+            </div>
+          </div>
+          <div class="bg-white shadow-md p-4 rounded-md">
+            <div class="flex flex-wrap gap-4">
+              <div class="w-28 h-28 -mt-8">
+                <img src="./assets/images/Website-icons (4) 1.gif" class="rounded-md" />
+              </div>
+              <div class="flex-1 flex flex-col gap-1">
+                <h4 class="text-xl font-roboto text-bodyTextColor font-medium">Learning meets Innovation</h4>
+                <div class="text text-blue text-sm font-roboto font-semibold">Our Hallmark</div>
+                <p class="text-lightGrey text-base leading-snug font-roboto">We've embraced the transformative power of
+                  technology
+                  to redefine how knowledge is enjoyed, adapting to meet
+                  the changing needs of learners worldwide.</p>
+              </div>
+            </div>
+          </div>
+          <div class="bg-white shadow-md p-4 rounded-md">
+            <div class="flex flex-wrap gap-4">
+              <div class="w-28 h-28 -mt-8">
+                <img src="./assets/images/Technology 1.gif" class="rounded-md" />
+              </div>
+              <div class="flex-1 flex flex-col gap-1">
+                <h4 class="text-xl font-roboto text-bodyTextColor font-medium">Embracing Technology</h4>
+                <div class="text text-blue text-sm font-roboto font-semibold">Our Process</div>
+                <p class="text-lightGrey text-base leading-snug font-roboto">Through artificial intelligence, augmented
+                  reality, and
+                  adaptive learning platforms, we tailor education to
+                  ensure every student reaches their full potential. </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="bg-lightPink py-20">
+      <div class="container">
+        <div class="max-w-5xl m-auto grid md:grid-cols-3 grid-cols-1 gap-4">
+          <div class="flex flex-col gap-2 items-center justify-center">
+            <h3 class="text-5xl font-roboto font-semibold text-blue">1 Mn+</h3>
+            <h4 class="text-bodyTextColor font-roboto font-medium">Learners</h4>
+            <p class="text-lightGrey font-roboto text-base text-center text-balance">Our content has been used by
+              ~ 1 million learners </p>
+          </div>
+          <div class="flex flex-col gap-2 items-center justify-center">
+            <h3 class="text-5xl font-roboto font-semibold text-blue">3000+</h3>
+            <h4 class="text-bodyTextColor font-roboto font-medium">Videos</h4>
+            <p class="text-lightGrey font-roboto text-base text-center text-balance">Created more than 15000+ hours
+              of e-learning content</p>
+          </div>
+          <div class="flex flex-col gap-2 items-center justify-center">
+            <h3 class="text-5xl font-roboto font-semibold text-blue">30+</h3>
+            <h4 class="text-bodyTextColor font-roboto font-medium">Languages</h4>
+            <p class="text-lightGrey font-roboto text-base text-center text-balance">Content creation is available in
+              30+
+              Indian and International languages</p>
+          </div>
+        </div>
+      </div>
+      <div class="max-w-6xl m-auto mt-20">
+        <div class="grid md:grid-cols-2 grid-cols-1 place-items-center">
+          <div class="flex flex-col gap-y-3">
+            <h4 class="text-bodyTextColor font-roboto font-medium text-3xl">Write to us for a free sample video</h4>
+            <p class="text-lightGrey font-roboto text-sm ">Contact us and we will share a free sample video custom to
+              your requirements.*
+              *T&C apply</p>
+            <div class="flex flex-wrap gap-x-4">
+             <button href="#"  onclick="openModal('modal-1')"
+                class="bg-gradient-to-r from-blue to-blueDark py-2 px-4 text-white text-base uppercase font-medium max-w-56 rounded-md hover:to-blueDark hover:from-blue hover:bg-gradient-to-tr focus:ring-1 focus:ring-blueDark">
+                Contact us
+             </button>
+            </div>
+          </div>
+          <div class="flex justify-center">
+            <img src="./assets/images/laptop.png" />
+          </div>
+        </div>
+
+      </div>
+    </section>
+    <section class="bg-cyan py-20">
+      <div class="container">
+        <h2 class="font-robotSlab text-white text-3xl mb-2">
+          Awards
+        </h2>
+        <p class="text-white text-opacity-75 font-roboto">Fundamentor has won numerous awards in the course of its 10 year journey. </p>
+        <div class="grid md:grid-cols-3 grid-cols-1 gap-y-8 gap-x-4 place-items-center mt-10" >
+          <img src="./assets/images/uktra-award 1.png" class="max-w-full"/>
+          <img src="./assets/images/mitsot-award 1.png" class="max-w-full"/>
+          <img src="./assets/images/ibmstar-award 1.png" class="max-w-full"/>
+          <img src="./assets/images/Google-startup-award 1.png" class="max-w-full"/>
+          <img src="./assets/images/FB-award.png" class="max-w-full"/>
+          <img src="./assets/images/fb-start-award.png" class="max-w-full"/>
+
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="py-20">
+    <div class="container">
+      <div class="grid md:grid-cols-5 grid-cols-2">
+        <div class="flex flex-col">
+          <a href="#" class="flex items-start justify-start flex-col gap-4">
+            <img src="./assets/images/logo.png">
+            <span class="text-bodyTextColor text-xl font-roboto font-medium">Fundamentor</span>
+          </a>
+          <ul class="flex flex-wrap gap-4 items-end p-0 mt-4">
+            <li>
+              <a href="https://www.facebook.com/realfundamentor/" target="_blank" class="text-bodyTextColor hover:text-blueDark">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">
+                  <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951"/>
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a href="https://x.com/realfundamentor" target="_blank" class="text-bodyTextColor hover:text-blueDark">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-twitter" viewBox="0 0 16 16">
+                  <path d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334q.002-.211-.006-.422A6.7 6.7 0 0 0 16 3.542a6.7 6.7 0 0 1-1.889.518 3.3 3.3 0 0 0 1.447-1.817 6.5 6.5 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.32 9.32 0 0 1-6.767-3.429 3.29 3.29 0 0 0 1.018 4.382A3.3 3.3 0 0 1 .64 6.575v.045a3.29 3.29 0 0 0 2.632 3.218 3.2 3.2 0 0 1-.865.115 3 3 0 0 1-.614-.057 3.28 3.28 0 0 0 3.067 2.277A6.6 6.6 0 0 1 .78 13.58a6 6 0 0 1-.78-.045A9.34 9.34 0 0 0 5.026 15"/>
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a href="https://in.linkedin.com/company/fundamentor" target="_blank" class="text-bodyTextColor hover:text-blueDark">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-linkedin" viewBox="0 0 16 16">
+                  <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z"/>
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a href="https://www.instagram.com/fundamentor/" target="_blank" class="text-bodyTextColor hover:text-blueDark">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-instagram" viewBox="0 0 16 16">
+                  <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334"/>
+                </svg>
+              </a>
+            </li>
+          
+          </ul>
+        </div>
+        <div class="flex flex-col flex-wrap gap-2">
+          <h4 class="text-bodyTextColor font-roboto font-semibold text-base">Company</h4>
+          <ul>
+            <li>
+              <a href="#" class="text-sm font-roboto hover:text-blueDark transition-all">About Us</a>
+            </li>
+            <li>
+              <a href="#" class="text-sm font-roboto hover:text-blueDark transition-all">Blog</a>
+            </li>
+            <li>
+              <a href="#" class="text-sm font-roboto hover:text-blueDark transition-all">News</a>
+            </li>
+          </ul>
+        </div>
+        <div class="flex flex-col flex-wrap gap-2">
+          <h4 class="text-bodyTextColor font-roboto font-semibold text-base">Resources</h4>
+          <ul>
+            <li>
+              <a href="#" class="text-sm font-roboto hover:text-blueDark transition-all">Brochure</a>
+            </li>
+            <li>
+              <a href="#" class="text-sm font-roboto hover:text-blueDark transition-all">Bits & Snippets</a>
+            </li>
+            
+          </ul>
+        </div>
+        <div class="flex flex-col flex-wrap gap-2">
+          <h4 class="text-bodyTextColor font-roboto font-semibold text-base">Help & Support</h4>
+          <ul>
+            <li>
+              <a href="#?" class="text-sm font-roboto hover:text-blueDark transition-all" onclick="openModal('modal-1')">Contact Us</a>
+            </li>
+            <li>
+              <a href="#" class="text-sm font-roboto hover:text-blueDark transition-all">Knowledge Center</a>
+            </li>
+            <li>
+              <a href="#?" class="text-sm font-roboto hover:text-blueDark transition-all" onclick="openModal('modal-1')">Custom Development</a>
+            </li>
+          </ul>
+        </div>
+        <div class="flex flex-col flex-wrap gap-2">
+          <h4 class="text-bodyTextColor font-roboto font-semibold text-base">Legal</h4>
+          <ul>
+            <li>
+              <a href="#" class="text-sm font-roboto hover:text-blueDark transition-all">Terms & Conditions</a>
+            </li>
+            <li>
+              <a href="#" class="text-sm font-roboto hover:text-blueDark transition-all">Privacy Policy</a>
+            </li>
+            <li>
+              <a href="#" class="text-sm font-roboto hover:text-blueDark transition-all">Licenses (EULA)</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+<div class="fixed z-10 hidden justify-center items-center flex-col h-full w-full top-0 jw-modal" id="modal-1">
+  <div class=" bg-white max-w-xl rounded w-full">
+  <div class="flex justify-between border-b border-lightGrey py-4 px-4 w-full">
+    <h4 class="font-roboto text-xl font-medium">Contact Us</h4>
+    <button onclick="closeModal('modal-1')" type="button" id="cross" class="text-black hover:bg-lightPink hover:text-bodyTextColor w-6 h-6 rounded-full flex justify-center items-center">
+      <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
+          <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"/>
+      </svg>
+      <span class="sr-only">Close modal</span>
+  </button>
+  </div>
+  <form method="POST" id="form" class="grid grid-cols-1 gap-6 py-4 px-4 w-full">
+    <input type="hidden" name="subject" value="Contact Form Submitted on Website">
+
+    <input type="hidden" name="access_key" value="39270e12-e6ec-4189-a389-6368c292212e">
+    <input placeholder="Type Your Name" class="px-4 py-2 border border-lightGrey focus:outline focus:outline-blue rounded-md focus-within:outline-blueDark" type="text" name="name" required>
+    <input placeholder="Type Your Email" class="px-4 py-2 border border-lightGrey focus:outline focus:outline-blue rounded-md focus-within:outline-blueDark" type="email" name="email" required>
+    <input class="px-4 py-2 border border-lightGrey focus:outline focus:outline-blue rounded-md focus-within:outline-blueDark" type="number" placeholder="Enter Your Number" required>
+    <textarea placeholder="Enter Your Message" class="px-4 py-2 border border-lightGrey focus:outline focus:outline-blue rounded-md focus-within:outline-blueDark" name="message" required></textarea>
+    <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+    <button type="submit" class="bg-blueDark px-6 py-4 rounded-full text-white focus:ring focus:ring-blue">Submit</button>
+
+    <div id="result"></div>
+  </div>
+</form>
+
+</div>
+<div class="bg-black bg-opacity-50 w-full h-full fixed top-0 left-0 bottom-0 right-0 jw-modal-background hidden"></div>
+
+<script src="https://www.google.com/recaptcha/api.js?render=6LfiHlkqAAAAAOCyA-Ful2lt7zgGOCs_ZICOXu44"></script>
+<script>
+  grecaptcha.ready(function() {
+    grecaptcha.execute('6LfiHlkqAAAAAOCyA-Ful2lt7zgGOCs_ZICOXu44', {
+      action: 'contact'
+    }).then(function(token) {
+      recaptchaResponse.value = token;
+    });
+  });
+</script>
+<script>
+const form = document.getElementById('form');
+const result = document.getElementById('result');
+
+form.addEventListener('submit', function(e) {
+  e.preventDefault();
+  const formData = new FormData(form);
+  const object = Object.fromEntries(formData);
+  const json = JSON.stringify(object);
+  result.innerHTML = "Please wait..."
+
+    fetch('https://api.web3forms.com/submit', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'Accept': 'application/json'
+            },
+            body: json
+        })
+        .then(async (response) => {
+            let json = await response.json();
+            if (response.status == 200) {
+                result.innerHTML = "Form submitted successfully";
+            } else {
+                console.log(response);
+                result.innerHTML = json.message;
+            }
+        })
+        .catch(error => {
+            console.log(error);
+            result.innerHTML = "Something went wrong!";
+        })
+        .then(function() {
+            form.reset();
+            setTimeout(() => {
+                result.style.display = "none";
+            }, 3000);
+        });
+});
+</script>
+  <script>
+    function openModal(id) {
+    document.getElementById(id).classList.add('flex');
+    document.getElementById(id).classList.remove('hidden');
+    document.querySelector('.jw-modal-background').classList.add('visible');
+    document.querySelector('.jw-modal-background').classList.remove('hidden');
+    document.body.classList.add('jw-modal-open');
+}
+
+// close currently open modal
+function closeModal(id) {
+    document.querySelector('.jw-modal.flex').classList.remove('flex');
+    document.querySelector('.jw-modal').classList.add('hidden');
+    document.querySelector('.jw-modal-background').classList.add('hidden');
+    document.querySelector('.jw-modal-background').classList.remove('visible');
+    document.body.classList.remove('jw-modal-open');
+}
+
+window.addEventListener('load', function() {
+    // close modals on background click
+    document.addEventListener('click', event => {
+        if (event.target.classList.contains('jw-modal')) {
+            closeModal();
+        }
+    });
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+    const toggle = document.querySelector('#button-toggle'),
+    sidebar = document.querySelector('#menu');
+
+toggle.addEventListener('click', function(e) {
+    e.preventDefault();
+    sidebar.classList.toggle('is-visible');
+});
+});
+let scrollpos = window.scrollY
+
+const header = document.querySelector("header")
+const add_class_on_scrollheader = () => header.classList.add("bg-bodyTextColor")
+const remove_class_on_scrollheader = () => header.classList.remove("bg-bodyTextColor")
+
+window.addEventListener('scroll', function() { 
+  scrollpos = window.scrollY;
+  if (scrollpos >= 10) {add_class_on_scrollheader()}
+  else {remove_class_on_scrollheader() }
+})
+  </script>
+</body>
+
+</html>
