@@ -360,12 +360,10 @@ html,body{
               your requirements.*
               *T&C apply</p>
             <div class="flex flex-wrap gap-x-4">
-              <input
-                class="px-4 py-2 bg-white focus:outline focus:outline-blue placeholder:text-lightGrey text-bodyTextColor border border-lightGrey rounded focus-within:ring-0 flex-1"
-                type="text" /> <a href="#"
+             <button href="#"  onclick="openModal('modal-1')"
                 class="bg-gradient-to-r from-blue to-blueDark py-2 px-4 text-white text-base uppercase font-medium max-w-56 rounded-md hover:to-blueDark hover:from-blue hover:bg-gradient-to-tr focus:ring-1 focus:ring-blueDark">
-                SUBSCRIBE
-              </a>
+                Contact us
+             </button>
             </div>
           </div>
           <div class="flex justify-center">
@@ -463,13 +461,13 @@ html,body{
           <h4 class="text-bodyTextColor font-roboto font-semibold text-base">Help & Support</h4>
           <ul>
             <li>
-              <a href="#" class="text-sm font-roboto hover:text-blueDark transition-all" onclick="openModal('modal-1')">Contact Us</a>
+              <a href="#?" class="text-sm font-roboto hover:text-blueDark transition-all" onclick="openModal('modal-1')">Contact Us</a>
             </li>
             <li>
               <a href="#" class="text-sm font-roboto hover:text-blueDark transition-all">Knowledge Center</a>
             </li>
             <li>
-              <a href="#" class="text-sm font-roboto hover:text-blueDark transition-all" onclick="openModal('modal-1')">Custom Development</a>
+              <a href="#?" class="text-sm font-roboto hover:text-blueDark transition-all" onclick="openModal('modal-1')">Custom Development</a>
             </li>
           </ul>
         </div>
@@ -502,15 +500,14 @@ html,body{
   </button>
   </div>
   <form method="POST" id="form" class="grid grid-cols-1 gap-6 py-4 px-4 w-full">
+    <input type="hidden" name="subject" value="Contact Form Submitted on Website">
 
-    <input type="hidden" name="access_key" value="436907d2-6daf-43e8-afe0-7e9989e61b43">
-
+    <input type="hidden" name="access_key" value="39270e12-e6ec-4189-a389-6368c292212e">
     <input placeholder="Type Your Name" class="px-4 py-2 border border-lightGrey focus:outline focus:outline-blue rounded-md focus-within:outline-blueDark" type="text" name="name" required>
     <input placeholder="Type Your Email" class="px-4 py-2 border border-lightGrey focus:outline focus:outline-blue rounded-md focus-within:outline-blueDark" type="email" name="email" required>
     <input class="px-4 py-2 border border-lightGrey focus:outline focus:outline-blue rounded-md focus-within:outline-blueDark" type="number" placeholder="Enter Your Number" required>
     <textarea placeholder="Enter Your Message" class="px-4 py-2 border border-lightGrey focus:outline focus:outline-blue rounded-md focus-within:outline-blueDark" name="message" required></textarea>
     <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
-
     <button type="submit" class="bg-blueDark px-6 py-4 rounded-full text-white focus:ring focus:ring-blue">Submit</button>
 
     <div id="result"></div>
