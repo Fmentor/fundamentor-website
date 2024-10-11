@@ -9,7 +9,7 @@ module.exports = {
       'lightPink':'#F4ECFF',
       'cyan':'#00C2A7',
       'lightYellow':'#FFFADE',
-      'blue':'#439DEE',
+      'blue':'#1A73E7',
       'blueDark':'#1E78E9',
       'white':'#fff',
       'yellowlime':'#F9F871',
