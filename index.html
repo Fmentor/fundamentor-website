@@ -2,10 +2,12 @@
 <html lang="en">
 
 <head>
-  <title>Fundamentor</title>
+  <title>Fundamentor: E-learning Solutions Provider</title>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="./assets/css/fundamentor.css?v=1" rel="stylesheet">
+  <meta name="description" content="Fundamentor| Experience the joy of learning across age, language, device and subject. Engage through interactive videos, games, storyboarding, simulations and much more to suit your learning needs. ">
+  <meta name="keywords" content="HTML, CSS, JavaScript">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@600&family=Roboto:wght@400;500&display=swap"
@@ -24,6 +26,12 @@
       overflow: scroll;
       scroll-behavior: smooth;
     }
+    @media (max-width: 767px) {
+      .hero{
+        background-position: -50px 0;
+      }
+   
+}
   </style>
 </head>
 
@@ -31,7 +39,7 @@
   <header class="fixed w-full z-50 top-0 py-3 ">
     <div class="container flex justify-between items-center">
       <div class="logo flex justify-between w-full md:w-auto">
-        <a href="/" class="outline-none focus:outline-blueDark font-roboto font-medium text-base text-white">
+        <a href="/" class="outline-none focus:outline-blueDark font-roboto font-medium text-base text-white" title="Fundamentor: E-learning Solutions Provider">
           Fundamentor
         </a>
         <button type="button" id="button-toggle"
@@ -77,7 +85,7 @@
             </a>
           </li>
           <li>
-            <a href="#about" class="flex items-center gap-2 py-2 px-4 text-white font-roboto">
+            <a href="#about" onclick="toggleContent()" id="mobile_apply_button" class="flex items-center gap-2 py-2 px-4 text-white font-roboto">
               <span><svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <rect x="12" y="3.75" width="5.25" height="3.75" rx="1" transform="rotate(-180 12 3.75)"
                     fill="currentcolor" />
@@ -87,7 +95,7 @@
                     fill="currentcolor" />
                 </svg>
               </span>
-              About us
+              About Us
             </a>
           </li>
           <li>
@@ -105,7 +113,7 @@
             </a>
           </li>
           <li class="">
-            <a href="#" class="bg-white px-4 py-2 uppercase hover:bg-blueDark hover:text-white rounded inline-flex max-sm:ml-3">Call Us</a>
+            <a href="#" class="bg-white px-4 py-2 uppercase hover:bg-blueDark hover:text-white rounded inline-flex max-md:ml-3">Call Us</a>
           </li>
         </ul>
       </nav>
@@ -118,10 +126,10 @@
       <a href="#" class="bg-white rounded py-2 px-4 text-bodyTextColor  hover:bg-blueDark hover:text-white" onclick="openModal('modal-1')">CONTACT
         US</a>
     </div>
-    <div class="bg-[url('../images/hero-banner.png')] bg-cover h-full  w-full absolute">
+    <div class="bg-[url('../images/hero-banner.png')] bg-cover h-full  w-full absolute hero" >
 
     </div>
-    <img class="absolute w-52 h-52 translate-x-[23rem] translate-y-[22rem] max-sm:hidden" src="./assets/images/bulb.gif" alt="Image of Bulb" />
+    <img class="absolute w-52 h-52 translate-x-[23rem] translate-y-[22rem] max-sm:hidden" src="./assets/images/bulb.gif" alt="E-learning content and solutions" />
   </div>
 
   <!-- End of hero Section -->
@@ -348,11 +356,11 @@
       <div class="max-w-6xl m-auto mt-20">
         <div class="grid md:grid-cols-2 grid-cols-1 place-items-center">
           <div class="flex flex-col gap-y-3">
-            <h4 class="text-bodyTextColor font-roboto font-medium text-3xl">Write to us for a free sample video</h4>
-            <p class="text-lightGrey font-roboto text-sm ">Contact us and we will share a free sample video custom to
+            <h4 class="text-bodyTextColor font-roboto font-medium text-3xl max-md:text-center">Write to us for a free sample video</h4>
+            <p class="text-lightGrey font-roboto text-sm max-md:text-center">Contact us and we will share a free sample video custom to
               your requirements.*
               *T&C apply</p>
-            <div class="flex flex-wrap gap-x-4">
+            <div class="flex flex-wrap gap-x-4 max-md:justify-center py-3">
              <button href="#"  onclick="openModal('modal-1')"
                 class="bg-gradient-to-r from-blue to-blueDark py-2 px-4 text-white text-base uppercase font-medium max-w-56 rounded-md hover:to-blueDark hover:from-blue hover:bg-gradient-to-tr focus:ring-1 focus:ring-blueDark">
                 Contact us
@@ -424,7 +432,7 @@
 
           </ul>
         </div>
-        <div class="flex flex-col flex-wrap gap-2">
+        <!-- <div class="flex flex-col flex-wrap gap-2">
           <h4 class="text-bodyTextColor font-roboto font-semibold text-base">Company</h4>
           <ul>
             <li>
@@ -437,34 +445,32 @@
               <a href="#" class="text-sm font-roboto hover:text-blueDark transition-all">News</a>
             </li>
           </ul>
-        </div>
-        <div class="flex flex-col flex-wrap gap-2">
+        </div> -->
+        <div class="flex flex-col flex-wrap gap-2 max-md:mt-4">
           <h4 class="text-bodyTextColor font-roboto font-semibold text-base">Resources</h4>
           <ul>
             <li>
               <a href="#" class="text-sm font-roboto hover:text-blueDark transition-all">Brochure</a>
             </li>
-            <li>
+            <!-- <li>
               <a href="#" class="text-sm font-roboto hover:text-blueDark transition-all">Bits & Snippets</a>
-            </li>
+            </li> -->
 
           </ul>
         </div>
-        <div class="flex flex-col flex-wrap gap-2">
+        <div class="flex flex-col flex-wrap gap-2 max-md:mt-4">
           <h4 class="text-bodyTextColor font-roboto font-semibold text-base">Help & Support</h4>
           <ul>
             <li>
               <a href="#?" class="text-sm font-roboto hover:text-blueDark transition-all" onclick="openModal('modal-1')">Contact Us</a>
             </li>
-            <li>
-              <a href="#" class="text-sm font-roboto hover:text-blueDark transition-all">Knowledge Center</a>
-            </li>
+          
             <li>
               <a href="#?" class="text-sm font-roboto hover:text-blueDark transition-all" onclick="openModal('modal-1')">Custom Development</a>
             </li>
           </ul>
         </div>
-        <div class="flex flex-col flex-wrap gap-2">
+        <!-- <div class="flex flex-col flex-wrap gap-2">
           <h4 class="text-bodyTextColor font-roboto font-semibold text-base">Legal</h4>
           <ul>
             <li>
@@ -477,11 +483,11 @@
               <a href="#" class="text-sm font-roboto hover:text-blueDark transition-all">Licenses (EULA)</a>
             </li>
           </ul>
-        </div>
+        </div> -->
       </div>
     </div>
   </footer>
-<div class="fixed z-10 hidden justify-center items-center flex-col h-full w-full top-0 jw-modal" id="modal-1">
+<div class="fixed z-10 hidden justify-center items-center flex-col h-full w-full top-0 jw-modal max-md:px-4" id="modal-1">
   <div class=" bg-white max-w-xl rounded w-full">
   <div class="flex justify-between border-b border-lightGrey py-4 px-4 w-full">
     <h4 class="font-roboto text-xl font-medium">Contact Us</h4>
@@ -734,13 +740,41 @@
 
 <script src="https://www.google.com/recaptcha/api.js?render=6LfiHlkqAAAAAOCyA-Ful2lt7zgGOCs_ZICOXu44"></script>
 <script>
-  grecaptcha.ready(function() {
-    grecaptcha.execute('6LfiHlkqAAAAAOCyA-Ful2lt7zgGOCs_ZICOXu44', {
-      action: 'contact'
-    }).then(function(token) {
-      recaptchaResponse.value = token;
-    });
-  });
+document.addEventListener("DOMContentLoaded", () => {
+    const toggle = document.querySelector('#button-toggle'),
+    sidebar = document.querySelector('#menu');
+
+toggle.addEventListener('click', function(e) {
+    e.preventDefault();
+    sidebar.classList.toggle('is-visible');
+});
+});
+function toggleContent() {
+    var toggle = document.getElementById("mobile_apply_button");
+    sidebar = document.querySelector('#menu');
+    if (window.innerWidth < 767)
+    {
+      if (toggle.classList === "is-visible") {
+        sidebar.classList.toggle('is-visible');
+      } else {
+        sidebar.classList.toggle('is-visible');
+      }
+    }
+  }
+
+let scrollpos = window.scrollY
+
+const header = document.querySelector("header")
+const add_class_on_scrollheader = () => header.classList.add("bg-bodyTextColor")
+const remove_class_on_scrollheader = () => header.classList.remove("bg-bodyTextColor")
+
+window.addEventListener('scroll', function() {
+  scrollpos = window.scrollY;
+  if (scrollpos >= 10) {add_class_on_scrollheader()}
+  else {remove_class_on_scrollheader() }
+})
+
+  
 </script>
 <script>
 const form = document.getElementById('form');
@@ -809,26 +843,7 @@ window.addEventListener('load', function() {
     });
 });
 
-document.addEventListener("DOMContentLoaded", () => {
-    const toggle = document.querySelector('#button-toggle'),
-    sidebar = document.querySelector('#menu');
 
-toggle.addEventListener('click', function(e) {
-    e.preventDefault();
-    sidebar.classList.toggle('is-visible');
-});
-});
-let scrollpos = window.scrollY
-
-const header = document.querySelector("header")
-const add_class_on_scrollheader = () => header.classList.add("bg-bodyTextColor")
-const remove_class_on_scrollheader = () => header.classList.remove("bg-bodyTextColor")
-
-window.addEventListener('scroll', function() {
-  scrollpos = window.scrollY;
-  if (scrollpos >= 10) {add_class_on_scrollheader()}
-  else {remove_class_on_scrollheader() }
-})
   </script>
 </body>
 
