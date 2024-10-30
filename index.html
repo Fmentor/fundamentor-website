@@ -746,8 +746,23 @@
 </div>
 <div class="bg-black bg-opacity-50 w-full h-full fixed top-0 left-0 bottom-0 right-0 jw-modal-background hidden"></div>
 
-<script src="https://www.google.com/recaptcha/api.js?render=6LfiHlkqAAAAAOCyA-Ful2lt7zgGOCs_ZICOXu44" async></script>
+
 <script>
+ var fired = false;
+window.addEventListener('scroll', function () {
+  let scroll = window.scrollY;
+  if (scroll > 0 && fired === false) {
+    var recaptchaScript = document.createElement('script');
+    recaptchaScript.src = 'https://www.google.com/recaptcha/api.js?render=6LfiHlkqAAAAAOCyA-Ful2lt7zgGOCs_ZICOXu44';
+    recaptchaScript.defer = true;
+    document.body.appendChild(recaptchaScript);
+    fired = true;
+   
+    // console.log('On scroll fired');
+  }
+}, true);
+
+
 document.addEventListener("DOMContentLoaded", () => {
     const toggle = document.querySelector('#button-toggle'),
     sidebar = document.querySelector('#menu');
