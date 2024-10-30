@@ -9,7 +9,7 @@
   
   <meta name="description" content="Fundamentor| Experience the joy of learning across age, language, device and subject. Engage through interactive videos, games, storyboarding, simulations and much more to suit your learning needs. ">
   <meta name="keywords" content="elearning,learning,games,children,interactive,story,simulation">
-  
+  <link rel="stylesheet" href="node_modules/lite-youtube-embed/src/lite-yt-embed.css" />
   <link href="./assets/css/fundamentor.css?v=1" rel="stylesheet">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -242,7 +242,9 @@
           <div class="flex justify-end">
             <div class="bg-white rounded-md shadow-md p-6 w-[25.5rem] max-md:mt-16">
               <div class="-mt-14 rounded-md overflow-hidden">
-                <iframe width="100%" height="250" src="https://www.youtube.com/embed/otxUtPJeYc8?si=mBg2ixQQOTmjXeZq" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <lite-youtube videoid="otxUtPJeYc8" playlabel="Play: Keynote (Google I/O '18)"></lite-youtube>
+
+                
               </div>
               <div class="text-center text-bodyTextColor flex flex-col gap-3 mt-6 items-center justify-center">
                 <h4 class="text-xl font-roboto text-center">Sample Videos </h4>
@@ -850,6 +852,8 @@ window.addEventListener('load', function() {
 
 
   </script>
+  <script src="node_modules/lite-youtube-embed/src/lite-yt-embed.js"></script>
+
 </body>
 
 </html>
