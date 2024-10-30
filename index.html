@@ -10,11 +10,12 @@
   <meta name="description" content="Fundamentor| Experience the joy of learning across age, language, device and subject. Engage through interactive videos, games, storyboarding, simulations and much more to suit your learning needs. ">
   <meta name="keywords" content="elearning,learning,games,children,interactive,story,simulation">
   <link rel="stylesheet" href="node_modules/lite-youtube-embed/src/lite-yt-embed.css" />
-  <link href="./assets/css/fundamentor.css?v=1" rel="stylesheet">
+  <link href="./assets/css/fundamentor.css?v=1" rel="stylesheet" media="all">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@600&family=Roboto:wght@400;500&display=swap"
-    rel="stylesheet">
+    rel="stylesheet" media="print"
+    onload="this.media='all'" >
   <link rel="icon" type="image/png" href="favicon.ico">
 
   <style>
@@ -745,7 +746,7 @@
 </div>
 <div class="bg-black bg-opacity-50 w-full h-full fixed top-0 left-0 bottom-0 right-0 jw-modal-background hidden"></div>
 
-<script src="https://www.google.com/recaptcha/api.js?render=6LfiHlkqAAAAAOCyA-Ful2lt7zgGOCs_ZICOXu44"></script>
+<script src="https://www.google.com/recaptcha/api.js?render=6LfiHlkqAAAAAOCyA-Ful2lt7zgGOCs_ZICOXu44" async></script>
 <script>
 document.addEventListener("DOMContentLoaded", () => {
     const toggle = document.querySelector('#button-toggle'),
