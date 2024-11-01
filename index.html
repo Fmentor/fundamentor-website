@@ -11,12 +11,12 @@
   <meta name="keywords" content="elearning,learning,games,children,interactive,story,simulation">
   <link rel="stylesheet" href="./assets/yt/lite-yt-embed.css" />
   <link href="./assets/css/fundamentor.css?v=1" rel="stylesheet" media="all">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css" integrity="sha256-5uKiXEwbaQh9cgd2/5Vp6WmMnsUr3VZZw0a8rKnOKNU=" crossorigin="anonymous">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@600&family=Roboto:wght@400;500&display=swap"
-    rel="stylesheet" media="print"
-    onload="this.media='all'" >
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@600&family=Roboto:wght@400;500&display=swap" rel="stylesheet" media="print" onload="this.media='all'" >
   <link rel="icon" type="image/png" href="favicon.ico">
+  
 
   <style>
     .is-visible ul{
@@ -29,6 +29,14 @@
     html,body{
       overflow: scroll;
       scroll-behavior: smooth;
+    }
+    .splide__slide{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .splide__arrows{
+      display: none;
     }
     @media (max-width: 767px) {
       .hero{
@@ -44,7 +52,7 @@
     <div class="container flex justify-between items-center">
       <div class="logo flex justify-between w-full md:w-auto">
         <a href="/" class="outline-none focus:outline-blueDark font-roboto font-medium text-base text-white flex items-center gap-2" title="Fundamentor: E-learning Solutions Provider">
-          <img src="./assets/images/fundamentor.png"/> Fundamentor
+          <img width="33" height="33" src="./assets/images/fundamentor.png" alt="Fundamentor"/> Fundamentor
         </a>
         <button type="button" id="button-toggle"
           class="toggle inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-white focus:text-blue focus:outline-none focus:outline-blue md:hidden"
@@ -135,7 +143,7 @@
     <div class="bg-[url('../images/hero-banner.png')] bg-cover h-full  w-full absolute hero" >
 
     </div>
-    <img class="absolute w-52 h-52 translate-x-[23rem] translate-y-[22rem] max-sm:hidden" src="./assets/images/bulb.gif" alt="E-learning content and solutions" />
+    <img class="absolute w-52 h-52 translate-x-[23rem] translate-y-[22rem] max-sm:hidden" src="./assets/images/bulb.gif" width="208" height="208" alt="E-learning content and solutions" />
   </div>
 
   <!-- End of hero Section -->
@@ -264,12 +272,29 @@
           <h2 class="font-robotSlab text-bodyTextColor text-3xl mb-8">
             Featured Clients
           </h2>
-          <div class="grid md:grid-cols-4 gap-10 grid-cols-2 place-items-center">
-            <img src="./assets/images/ac.png" alt="Accenture logo">
-            <img src="./assets/images/st.png" alt="PwC Strategy logo">
-            <img src="./assets/images/magi.png" alt="Magic Bus logo">
-            <img src="./assets/images/fisdom.png" alt="Fisdom logo">
-          </div>
+          <section class="splide" aria-label="Splide Basic HTML Example">
+            <div class="splide__track">
+              <ul class="splide__list">
+                <li class="splide__slide">
+                  <img data-splide-lazy="./assets/images/ac.png" alt="Accenture"/>
+                </li>
+                <li class="splide__slide"><img data-splide-lazy="./assets/images/st.png" alt="PwC Strategy logo"></li>
+                <li class="splide__slide"><img data-splide-lazy="./assets/images/niitfoundatinLogonew 1.png" alt="NIIT Foundation"></li>
+                <li class="splide__slide"> <img data-splide-lazy="./assets/images/magi.png" alt="Magic Bus logo"></li>
+                <li class="splide__slide"><img data-splide-lazy="./assets/images/etut.png" alt="etut"></li>
+                <li class="splide__slide"><img data-splide-lazy="./assets/images/comtel-logo.png" alt="Comtel"></li>
+                <li class="splide__slide"><img data-splide-lazy="./assets/images/fisdom.png" alt="Fisdom logo"></li>
+                <li class="splide__slide"><img data-splide-lazy="./assets/images/nijuedx.png" alt="Fisdom logo"></li>
+                <li class="splide__slide"><img data-splide-lazy="./assets/images/unnati-logo 1.png" alt="Fisdom logo"></li>
+                <li class="splide__slide"><img data-splide-lazy="./assets/images/Fourth partner energy.png" alt="Fisdom logo"></li>
+                <li class="splide__slide"><img data-splide-lazy="./assets/images/linktoany_logo 1.png" alt="Fisdom logo"></li>
+                <li class="splide__slide"><img data-splide-lazy="./assets/images/TLC-logo.png" alt="Fisdom logo"></li>
+                <li class="splide__slide"><img data-splide-lazy="./assets/images/new-india-school.png" alt="Fisdom logo"></li>
+                <li class="splide__slide"><img data-splide-lazy="./assets/images/silver-oaks-hyd.png" alt="Fisdom logo"></li>
+              </ul>
+            </div>
+          </section>
+        
         </div>
       </div>
     </section>
@@ -865,11 +890,28 @@ window.addEventListener('load', function() {
         }
     });
 });
-
+document.addEventListener( 'DOMContentLoaded', function() {
+    var splide = new Splide( '.splide',{
+      type   : 'loop',
+      perPage: 7,
+      pagination:false,
+      autoplay:true,
+      pauseOnHover:true,
+      lazyLoad:'sequential',
+      isNavigation:false,
+      perMove:1,
+      breakpoints: {
+		640: {
+			perPage: 3,
+		},
+  }
+    } );
+    splide.mount();
+  } );
 
   </script>
   <script src="./assets/yt/lite-yt-embed.js"></script>
-
+  <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js" integrity="sha256-FZsW7H2V5X9TGinSjjwYJ419Xka27I8XPDmWryGlWtw=" crossorigin="anonymous"></script>
 </body>
 
 </html>
