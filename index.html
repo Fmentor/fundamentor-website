@@ -35,12 +35,32 @@
       align-items: center;
       justify-content: center;
     }
-    .splide__arrows{
-      display: none;
+    .splide__arrow--prev {
+    left: -0.95em;
+}
+.splide__arrow--next {
+    right: -0.5em;
+}
+    .splide__pagination__page{
+      background: #1a73e7;
+    }
+    .splide__pagination__page{
+      background: #95baeb;
+    }
+    .splide__pagination__page.is-active{
+      background: #1a73e7;
+    }
+    .bg-colr-gr{
+
+      background-image: url('./assets/images/bg-fu.png');
+      background-repeat: repeat;
+    }
+    .hero{
+      background-position: center bottom;
     }
     @media (max-width: 767px) {
       .hero{
-        background-position: -50px 0;
+        background-position: center 355px;
       }
    
 }
@@ -132,20 +152,22 @@
         </ul>
       </nav>
   </header>
-  <div class="relative h-[56.25rem]">
+  <div class="bg-colr-gr ">
+    <div class="container relative h-[56.25rem] max-sm:p-0 max-sm:h-[35rem]">
     <div class="flex justify-center items-center absolute z-10 w-full flex-col h-[26rem]">
-      <h1 class="font-robotSlab text-5xl text-white font-semibold ">Joy of learning</h1>
+      <h1 class="font-robotSlab text-5xl text-white font-semibold">Joy of learning</h1>
       <p class="text-center text-white mb-10 max-w-sm mt-5">Fundamentor is a digital educational content provider
         and an e-learning solutions company.</p>
       <a href="#" class="bg-white rounded py-2 px-4 text-bodyTextColor  hover:bg-blueDark hover:text-white" onclick="openModal('modal-1')">CONTACT
         US</a>
     </div>
-    <div class="bg-[url('../images/hero-banner.png')] bg-cover h-full  w-full absolute hero" >
+    <div class=" h-full  w-full absolute"></div>
+    <div class="bg-[url('../images/hero-banner.png')] bg-contain bg bg-no-repeat h-full  w-full absolute hero" >
 
     </div>
-    <img class="absolute w-52 h-52 translate-x-[23rem] translate-y-[22rem] max-sm:hidden" src="./assets/images/bulb.gif" width="208" height="208" alt="E-learning content and solutions" />
+    <img class="absolute w-52 h-52 translate-x-[18rem] max-sm:translate-x-[2rem] max-sm:translate-y-[22rem] max-sm:w-28 max-sm:h-28 translate-y-[22rem]" src="./assets/images/bulb.gif" width="208" height="208" alt="E-learning content and solutions" />
   </div>
-
+</div>
   <!-- End of hero Section -->
 
   <main class="px-6">
@@ -896,15 +918,15 @@ document.addEventListener( 'DOMContentLoaded', function() {
     var splide = new Splide( '.splide',{
       type   : 'loop',
       perPage: 7,
-      pagination:false,
+      pagination:true,
       autoplay:true,
       pauseOnHover:true,
       lazyLoad:'sequential',
       isNavigation:false,
-      perMove:1,
       breakpoints: {
 		640: {
-			perPage: 3,
+			perPage: 1,
+      padding: { left: '1rem', right: '1rem' }
 		},
   }
     } );
